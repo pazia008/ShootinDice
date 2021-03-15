@@ -27,13 +27,19 @@ namespace ShootingDice
 
             Player large = new LargeDicePlayer();
             large.Name = "Bigun Rollsalot";
-
             player1.Play(large);
+
+            SmackTalkingPlayer smack = new SmackTalkingPlayer();
+            smack.Name = "Lord Farquaad";
+            smack.Taunt = "I'm not the monster here. You are!!";
+            smack.Play(player1);
+
+
 
             Console.WriteLine("-------------------");
 
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+                player1, player2, player3, large, smack
             };
 
             PlayMany(players);
